@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fest Result Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+     <script defer src="script.js"></script>
+    <!-- PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container" id="resultSheet">
+      <h1>Fest Result Calculator</h1>
+
+      <div class="form">
+        <input type="text" id="name" placeholder="Name" />
+
+        <select id="team">
+          <option>ZEAL ZAVIYA</option>
+          <option>GUSTO QUAFILA</option>
+          
+        </select>
+
+        <input type="text" id="program" placeholder="Program" />
+        <input type="number" id="marks" placeholder="Marks" />
+
+        <select id="category">
+          <option>Stage</option>
+          <option>Off Stage</option>
+        </select>
+
+        <select id="division">
+          <option>General</option>
+          <option>Junior</option>
+          <option >senior</option>
+        </select>
+
+        <select id="subdivision">
+          <option>General A</option>
+          <option>General B</option>
+        </select>
+
+        <button onclick="addEntry()">Add Entry</button>
+        <button onclick="clearAll()">Clear All</button>
+        <button onclick="exportPDF()">Export PDF</button>
+      </div>
+
+      <h2>All Entries</h2>
+      <table id="entryTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Team</th>
+            <th>Program</th>
+            <th>Marks</th>
+            <th>Category</th>
+            <th>Division</th>
+            <th>Sub-Division</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h2>Team Totals</h2>
+      <table id="teamTotals">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Total Marks</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    
+  </body>
+</html>
